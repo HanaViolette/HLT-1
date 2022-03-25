@@ -1,17 +1,13 @@
 CREATE DATABASE Library;
-CREATE TABLE Book(Id,
-				  PublishDate int, 
-				  Author varchar
-				  Title varchar
-				  MemberName varchar
-				  Category varchar
+DROP DATABASE Library;
+CREATE DATABASE LibraryManagement;
+USE LibraryManagement;
+CREATE TABLE Book(primary key (Book_Id),
+                  Book_Id int,
+				  PublishDate date,
+				  Author varchar (50),
+				  BookTitle varchar (50),
+				  MemberName varchar (50),
+				  Category varchar (50),
                   Copies_owned int);
-                     
-CREATE TABLE Member(Id
-                    First_name varchar
-                    Last_name varchar);
-				
-CREATE TABLE loan(Id,
-				Book_id
-                Member_id
-                Loan_date);
+explain Book
